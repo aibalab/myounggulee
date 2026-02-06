@@ -1,4 +1,4 @@
-import { GraduationCap, Briefcase, BookOpen, User, Building } from 'lucide-react';
+import { GraduationCap, Briefcase, BookOpen, User, Building, Mail } from 'lucide-react';
 import { labInfo } from '../data/labInfo';
 
 const Professor = () => {
@@ -38,17 +38,25 @@ const Professor = () => {
                                     <BookOpen className="h-5 w-5 mr-3 text-primary-600" />
                                     <span>{labInfo.department}</span>
                                 </div>
-                            </div>
-
-                            <div className="mt-8 pt-8 border-t border-slate-200">
-                                <h3 className="font-semibold text-slate-900 mb-4">Research Interests</h3>
-                                <div className="flex flex-wrap gap-2">
-                                    {professor.interests.map(tag => (
-                                        <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-50 text-primary-700">
-                                            {tag}
-                                        </span>
-                                    ))}
+                                <div className="flex items-center text-slate-600 pt-2 border-t border-slate-100">
+                                    <Mail className="h-5 w-5 mr-3 text-primary-600" />
+                                    <a href={`mailto:${labInfo.email}`} className="text-sm hover:text-primary-600 transition-colors truncate" title={labInfo.email}>{labInfo.email}</a>
                                 </div>
+                                <div className="flex items-center text-slate-600">
+                                    <GraduationCap className="h-5 w-5 mr-3 text-primary-600" />
+                                    <a href={labInfo.googleScholar} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-primary-600 transition-colors">Google Scholar</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="mt-8 pt-8 border-t border-slate-200">
+                            <h3 className="font-semibold text-slate-900 mb-4">Research Interests</h3>
+                            <div className="flex flex-wrap gap-2">
+                                {professor.interests.map(tag => (
+                                    <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-50 text-primary-700">
+                                        {tag}
+                                    </span>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -124,7 +132,7 @@ const Professor = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
