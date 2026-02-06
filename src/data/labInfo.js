@@ -9,6 +9,7 @@ export const labInfo = {
     location: "120 Neungdong-ro, Gwangjin-gu, Seoul 05029, South Korea",
     email: "myounggulee@konkuk.ac.kr",
     googleScholar: "https://scholar.google.com/citations?user=Bq57hwYAAAAJ&hl=ko",
+    linkedin: "https://www.linkedin.com/in/myounggu-lee-55736773/",
     univHome: "https://kbs.konkuk.ac.kr/kbs/23961/subview.do",
     cvLink: "https://docs.google.com/document/d/1T1RuPHsVFsxrHhkJid1FIPr-6S6SmdSf/edit?usp=drive_link&ouid=109667819159317009117&rtpof=true&sd=true",
 
@@ -22,11 +23,11 @@ export const labInfo = {
     professor: {
         name: "Myounggu Lee",
         nameKr: "이명구",
-        title: "Assistant Professor | Data Scientist",
+        title: "Assistant Professor of MIS | Data Scientist",
         photo: "/profile.jpg", // 사진 파일 경로 (예: "/images/professor.jpg")
         bio: [
             "Hello! I am Myounggu Lee, an Assistant Professor in Management Information Systems at the School of Business, Konkuk University.",
-            "My research leverages AI technology to transform value across business domains. Previously, I served as a lecturer at the University of Seoul and worked as a data analyst at major firms including KPMG, Kearney, Deloitte, and Samsung Global Research.",
+            "My research leverages AI technology to transform value across business domains. Previously, I served as a lecturer at the University of Seoul and worked as a data analyst at major firms including KPMG Economic Research Institute, Kearney, Deloitte, and Samsung Global Research.",
             "I hold a Ph.D. in Business and Technology Management from KAIST."
         ],
         education: [
@@ -50,7 +51,7 @@ export const labInfo = {
     professionalExperience: [
         { title: 'Tech. Advisor', org: 'Witz.ai', period: '2023' },
         { title: 'Lecturer', org: 'University of Seoul', period: '2023' },
-        { title: 'Senior Analyst', org: 'KPMG', period: '2019-2020' },
+        { title: 'Senior Analyst', org: 'KPMG Economic Research Institute', period: '2019-2020' },
         { title: 'Business Analyst', org: 'Kearney', period: '2018' },
         { title: 'Quantitative Analyst', org: 'Deloitte Anjin LLC', period: '2016-2018' },
         { title: 'RA', org: 'Samsung Global Research', period: '2015-2016' },
