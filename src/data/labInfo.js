@@ -26,7 +26,7 @@ export const labInfo = {
         photo: "/profile.jpg", // 사진 파일 경로 (예: "/images/professor.jpg")
         bio: [
             "Hello! I am Myounggu Lee, an Assistant Professor in Management Information Systems at the School of Business, Konkuk University.",
-            "My research leverages AI technology to transform value across business domains. Previously, I served as a lecturer at the University of Seoul and worked as a data analyst at major firms including Kearney, Deloitte, and Samsung Global Research.",
+            "My research leverages AI technology to transform value across business domains. Previously, I served as a lecturer at the University of Seoul and worked as a data analyst at major firms including KPMG, Kearney, Deloitte, and Samsung Global Research.",
             "I hold a Ph.D. in Business and Technology Management from KAIST."
         ],
         education: [
@@ -50,6 +50,7 @@ export const labInfo = {
     professionalExperience: [
         { title: 'Tech. Advisor', org: 'Witz.ai', period: '2023' },
         { title: 'Lecturer', org: 'University of Seoul', period: '2023' },
+        { title: 'Senior Analyst', org: 'KPMG', period: '2019-2020' },
         { title: 'Business Analyst', org: 'Kearney', period: '2018' },
         { title: 'Quantitative Analyst', org: 'Deloitte Anjin LLC', period: '2016-2018' },
         { title: 'RA', org: 'Samsung Global Research', period: '2015-2016' },
