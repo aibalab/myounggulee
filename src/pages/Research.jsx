@@ -19,13 +19,11 @@ const Research = () => {
         ],
         conferences: [
             "\"Machine Learning-Based Prediction of the Most Valuable Player (MVP) in E-sports Matches and Analysis of Influencing Factors: Focusing on <League of Legends>,\" 2025 Academic Conference on Management Information Systems (Fall), Korea University, Seoul, Korea (2025)",
-            "“Unveiling invisible demand: A Generative AI approach,” Best Paper Second Runner-up Award, 2025 KrAIS Summer Workshop, Busan Port International Exhibition & Convention Center (BPEX), Busan, Korea (2025)",
-            "“Unveiling invisible demand: A Generative AI approach,” 2025 Korean Marketing Association (KMA) Spring Conference, Ewha Womans University, Seoul, Korea (2025)",
-            "“Unveiling invisible demand: A Generative AI approach,” 2025 Korea Academy of Commodity Science and Technology (KACST) Spring Conference, Incheon National University, Seoul, Korea (2025)",
+
             "“When disaster strikes: The impact of national disasters on digital music consumption,” 2024 KrAIS Summer Workshop, Seoul National University, Seoul, Korea (2024)",
             "“When disaster strikes: The impact of national disasters on digital music consumption,” 2024 Joint Academic Conference on Management Information Systems, Yonsei University, Seoul, Korea (2024)",
             "“When disaster strikes: The impact of national disasters on digital music consumption,” 2024 Korea Productivity Association Spring Conference, Konkuk University, Seoul, Korea (2024)",
-            "“Unveiling invisible demand: A Bayesian deep learning approach,” Marketing Dynamics Conference 2023, Northeastern University, Boston, MA (2023)",
+
             "“Extracting Offline Retail Shopping Patterns: Collaborative Filtering with Restricted Boltzmann Machines,” 2023 KrAIS Summer Workshop, Korea University, Seoul, Korea (2023)",
             "“Extracting Offline Retail Shopping Patterns: Collaborative Filtering with Restricted Boltzmann Machines,” 2023 Global Marketing Conference at Seoul, Seoul, Korea (2023)",
             "“Predicting Mobile Purchases through Social Media App Usage Behavior,” 2023 Korean Marketing Association (KMA) Spring Conference, Sogang University, Seoul, Korea (2023)",
