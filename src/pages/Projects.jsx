@@ -2,13 +2,7 @@ import { Briefcase } from 'lucide-react';
 
 const Projects = () => {
     const projects = [
-        {
-            period: '2024.03 - Present',
-            title: 'Unveiling invisible demand: A Generative AI approach',
-            title_kr: '보이지 않는 수요 발견하기: 생성형 AI 접근법',
-            desc: 'Developing Customer Clustering and Targeting Models Based on Local Interpretability of Payment Behavior',
-            desc_kr: '결제 행동의 설명가능성 기반 고객 클러스터링 및 타겟팅 모델 구축'
-        },
+
         {
             period: '2023.07 - 2023.12',
             title: 'Character IP valuation & Recommender System (Deep Learning)',
