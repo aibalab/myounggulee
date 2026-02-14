@@ -128,7 +128,7 @@ const Professor = () => {
                                 Academic Service
                             </h2>
                             <ul className="list-disc pl-5 space-y-2 text-slate-600">
-                                <li><strong>Editorial Service:</strong> 정보통신정책학회 편집위원, (전) 대한경영학회 편집위원</li>
+                                <li><strong>Editorial Service:</strong> Journal of Global Scholars of Marketing Science ERB, 정보통신정책학회 편집위원, (전) 대한경영학회 편집위원</li>
                                 <li><strong>Peer Review:</strong> Electronic Commerce Research, Journal of Business Research, APJIS, etc.</li>
                                 <li><strong>Membership:</strong> 한국경영정보학회 종신회원, 정보통신정책학회 종신회원</li>
                             </ul>
