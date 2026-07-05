@@ -63,6 +63,7 @@ export const labInfo = {
             period: '2024 ~ 2026',
             courses: [
                 { type: '[MBA]', name: 'Management Information System', semester: 'Fall 2024' },
+                { type: '[MBA]', name: 'Business Analytics with AI', semester: 'Summer 2026' },
                 { type: '[Undergraduate]', name: 'Management Information Systems in Practice', semester: 'Fall 2024; Fall 2025; Spring 2026' },
                 { type: '[Undergraduate]', name: 'Data-driven Decision Making', semester: 'Spring 2024; Spring 2025; Spring 2026' },
                 { type: '[Undergraduate]', name: 'Data Mining', semester: 'Spring 2024; Spring/Fall 2025' },

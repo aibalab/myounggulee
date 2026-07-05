@@ -3,7 +3,7 @@ import { FileText, Mic, Globe, Book } from 'lucide-react';
 const Research = () => {
     const publications = {
         international: [
-            "Lee, M.*, & Kim, H. J. (2026). Uncovering App Activity Patterns Behind E-Commerce App Usage: An Explainable AI Framework. Asia Marketing Journal. (Accepted)",
+            "Lee, M.*, & Kim, H. J. (2026). Uncovering App Activity Patterns Behind E-Commerce App Usage: An Explainable AI Framework. Asia Marketing Journal, 28(2).",
             "Kim, W.- sung, Choi, I. & Lee, M.* (2025). Explainable AI-based mass appraisal: Insights from machine learning applications in Korea’s residential property market. International Journal of Strategic Property Management, 29(5), 350–376.",
             "Lee, M., Cho, J.*, Kim, Y., & Kim, H. J. (2025). Extracting offline retail shopping patterns: a restricted Boltzmann machines approach to customer segmentation and cross-selling. Expert Systems with Applications, 128797.",
             "Kim, H., & Lee, M.* (2025). Unraveling the Drivers of ESG Performance in Chinese Firms: An Explainable Machine-Learning Approach. Systems, 13(7), 578.",
