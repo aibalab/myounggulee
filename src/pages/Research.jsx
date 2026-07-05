@@ -1,36 +1,41 @@
-import { FileText, Mic, Globe, Book } from 'lucide-react';
+import { Mic, Globe, Book } from 'lucide-react';
 
 const Research = () => {
     const publications = {
         international: [
-            "Lee, M.*, & Kim, H. J. (2026). Uncovering App Activity Patterns Behind E-Commerce App Usage: An Explainable AI Framework. Asia Marketing Journal, 28(2).",
-            "Kim, W.- sung, Choi, I. & Lee, M.* (2025). Explainable AI-based mass appraisal: Insights from machine learning applications in Korea’s residential property market. International Journal of Strategic Property Management, 29(5), 350–376.",
-            "Lee, M., Cho, J.*, Kim, Y., & Kim, H. J. (2025). Extracting offline retail shopping patterns: a restricted Boltzmann machines approach to customer segmentation and cross-selling. Expert Systems with Applications, 128797.",
-            "Kim, H., & Lee, M.* (2025). Unraveling the Drivers of ESG Performance in Chinese Firms: An Explainable Machine-Learning Approach. Systems, 13(7), 578.",
-            "Lee, M.*, Choi, I., & Kim, W. C. (2025). Predicting Mobile Payment Behavior Through Explainable Machine Learning and Application Usage Analysis. Journal of Theoretical and Applied Electronic Commerce Research, 20(2), 117.",
-            "Lee, M., & Kim, H. J.* (2023). A collaborative filtering model incorporating media promotions and users' variety-seeking tendencies in the digital music market. Decision Support Systems, 114022.",
-            "Lee, M., Cho, J.*, Kim, Y., & Kim, H. J. (2023). Impact of Movie-watching on Cross-selling Revenue in Shopping Malls: Implications for Post-pandemic Recovery. Journal of Retailing and Consumer Services, 73, 103350.",
-            "Choi, I., Lee, M., Kim, H., & Kim, W. C.* (2023). Elucidating Directed Statistical Dependencies: Investigating Global Financial Market Indices' Influence on Korean Short Selling Activities. Pacific-Basin Finance Journal, 79, 102018. (First author - Equal contribution)",
-            "Lee, M., and Kim, H. J.* (2022). Exploring Determinants of Digital Music Success in South Korea. Electronic Commerce Research, 1-22.",
+            `Lee, M.*, & Kim, H. J. (2026). Uncovering App Activity Patterns Behind E-Commerce App Usage: An Explainable AI Framework. Asia Marketing Journal, 28(2).`,
+            `Kim, W. S., Choi, I., & Lee, M.* (2025). Explainable AI-based mass appraisal: Insights from machine learning applications in Korea’s residential property market. International Journal of Strategic Property Management, 29(5), 350-376.`,
+            `Lee, M., Cho, J.*, Kim, Y., & Kim, H. J. (2025). Extracting offline retail shopping patterns: a restricted Boltzmann machines approach to customer segmentation and cross-selling. Expert Systems with Applications, 128797.`,
+            `Kim, H., & Lee, M.* (2025). Unraveling the Drivers of ESG Performance in Chinese Firms: An Explainable Machine-Learning Approach. Systems, 13(7), 578.`,
+            `Lee, M.*, Choi, I., & Kim, W. C. (2025). Predicting Mobile Payment Behavior Through Explainable Machine Learning and Application Usage Analysis. Journal of Theoretical and Applied Electronic Commerce Research, 20(2), 117.`,
+            `Lee, M., & Kim, H. J.* (2023). A collaborative filtering model incorporating media promotions and users' variety-seeking tendencies in the digital music market. Decision Support Systems, 114022.`,
+            `Lee, M., Cho, J.*, Kim, Y., & Kim, H. J. (2023). Impact of Movie-watching on Cross-selling Revenue in Shopping Malls: Implications for Post-pandemic Recovery. Journal of Retailing and Consumer Services, 73, 103350.`,
+            `Choi, I., Lee, M., Kim, H., & Kim, W. C.* (2023). Elucidating Directed Statistical Dependencies: Investigating Global Financial Market Indices' Influence on Korean Short Selling Activities. Pacific-Basin Finance Journal, 79, 102018. (First author - equal contribution)`,
+            `Lee, M., and Kim, H. J.* (2022). Exploring Determinants of Digital Music Success in South Korea. Electronic Commerce Research, 1-22.`,
         ],
         domestic: [
-            "이명구, 김혜진*. \"디자인의 골디락스 존: 캐릭터 디자인 시장 성공을 위한 시각적 복잡성의 최적화.\" 경영학연구 (2026), Accepted",
-            "김혜진*, 이명구. \"마케팅 분야의 머신러닝 연구 동향 분석.\" 마케팅연구 36, no. 1 (2021): 1-25.",
+            `Um, T., Lee, M.*, Cho, J., Kim, H. J. (2026). How International Travel Reshapes Mobile App Usage: Evidence from Panel Data. Journal of Product Research, 44(2), 97-103.`,
+            `Lee, M., & Kim, H. J.* (2026). The Goldilocks Zone of Design: Optimizing Visual Complexity for Character Design Market Success. Korean Management Review, 55(1), 313-346.`,
+            `Kim, H. J.* and Lee, M. (2021). Research Trends in Machine Learning Applications in Marketing. Korean Journal of Marketing, 36(1), 1-25.`,
         ],
         conferences: [
-            "\"Machine Learning-Based Prediction of the Most Valuable Player (MVP) in E-sports Matches and Analysis of Influencing Factors: Focusing on <League of Legends>,\" 2025 Academic Conference on Management Information Systems (Fall), Korea University, Seoul, Korea (2025)",
-
-            "“When disaster strikes: The impact of national disasters on digital music consumption,” 2024 KrAIS Summer Workshop, Seoul National University, Seoul, Korea (2024)",
-            "“When disaster strikes: The impact of national disasters on digital music consumption,” 2024 Joint Academic Conference on Management Information Systems, Yonsei University, Seoul, Korea (2024)",
-            "“When disaster strikes: The impact of national disasters on digital music consumption,” 2024 Korea Productivity Association Spring Conference, Konkuk University, Seoul, Korea (2024)",
-
-            "“Extracting Offline Retail Shopping Patterns: Collaborative Filtering with Restricted Boltzmann Machines,” 2023 KrAIS Summer Workshop, Korea University, Seoul, Korea (2023)",
-            "“Extracting Offline Retail Shopping Patterns: Collaborative Filtering with Restricted Boltzmann Machines,” 2023 Global Marketing Conference at Seoul, Seoul, Korea (2023)",
-            "“Predicting Mobile Purchases through Social Media App Usage Behavior,” 2023 Korean Marketing Association (KMA) Spring Conference, Sogang University, Seoul, Korea (2023)",
-            "“A Collaborative Filtering Model Incorporating Media Promotions and Users’ Variety-Seeking Tendencies in the Digital Music Market,” Feeder Workshop of WITS 2023: AI on Platform Business, Seoul National University, Seoul, Korea (2023).",
-            "“Using Restricted Boltzmann Machines to Enhance Collaborative Filtering-based Cross-selling Approach,” KAIST-Brain Korea 21 Workshop, Buyeo, Korea (2023).",
-            "“Impact of Movie-watching on Cross-selling Revenue in Shopping Malls,” International Conference of Asian Marketing Associations (ICAMA), Jeju, Korea (2022).",
-            "“A Collaborative Filtering Model Incorporating Media Promotions and Users’ Variety-Seeking Tendencies in the Digital Music Market,” KAIST BTM Brown Bag Seminar, Daejeon, Korea (2021), KAIST AI-SSRG Boot Camp, Virtual (2021)."
+            `“Leveraging Machine Learning as a Research Methodology: Insights from Digital Marketing and Electricity Consumption,” Academic Seminar at The Korea Association for Telecommunications Policies, Seoul, Korea (2026)`,
+            `“Leveraging Machine Learning as a Research Methodology: Insights from Digital Marketing and Electricity Consumption,” BK21 Academic Seminar, Korea University, Seoul, Korea (2026)`,
+            `"Machine Learning-Based Prediction of the Most Valuable Player (MVP) in E-sports Matches and Analysis of Influencing Factors: Focusing on <League of Legends>," 2025 Academic Conference on Management Information Systems (Fall), Korea University, Seoul, Korea (2025)`,
+            `“Unveiling invisible demand: A Generative AI approach,” Best Paper Second Runner-up Award, 2025 KrAIS Summer Workshop, Busan Port International Exhibition & Convention Center (BPEX), Busan, Korea (2025)`,
+            `“Unveiling invisible demand: A Generative AI approach,” 2025 Korean Marketing Association (KMA) Spring Conference, Ewha Womans University, Seoul, Korea (2025)`,
+            `“Unveiling invisible demand: A Generative AI approach,” 2025 Korea Academy of Commodity Science and Technology (KACST) Spring Conference, Incheon National University, Seoul, Korea (2025)`,
+            `“When disaster strikes: The impact of national disasters on digital music consumption,” 2024 KrAIS Summer Workshop, Seoul National University, Seoul, Korea (2024)`,
+            `“When disaster strikes: The impact of national disasters on digital music consumption,” 2024 Joint Academic Conference on Management Information Systems, Yonsei University, Seoul, Korea (2024)`,
+            `“When disaster strikes: The impact of national disasters on digital music consumption,” 2024 Korea Productivity Association Spring Conference, Konkuk University, Seoul, Korea (2024)`,
+            `“Unveiling invisible demand: A Bayesian deep learning approach,” Marketing Dynamics Conference 2023, Northeastern University, Boston, MA (2023)`,
+            `“Extracting Offline Retail Shopping Patterns: Collaborative Filtering with Restricted Boltzmann Machines,” 2023 KrAIS Summer Workshop, Korea University, Seoul, Korea (2023)`,
+            `“Extracting Offline Retail Shopping Patterns: Collaborative Filtering with Restricted Boltzmann Machines,” 2023 Global Marketing Conference at Seoul, Seoul, Korea (2023)`,
+            `“Predicting Mobile Purchases through Social Media App Usage Behavior,” 2023 Korean Marketing Association (KMA) Spring Conference, Sogang University, Seoul, Korea (2023)`,
+            `“A Collaborative Filtering Model Incorporating Media Promotions and Users’ Variety-Seeking Tendencies in the Digital Music Market,” Feeder Workshop of WITS 2023: AI on Platform Business, Seoul National University, Seoul, Korea (2023).`,
+            `“Using Restricted Boltzmann Machines to Enhance Collaborative Filtering-based Cross-selling Approach,” KAIST-Brain Korea 21 Workshop, Buyeo, Korea (2023).`,
+            `“Impact of Movie-watching on Cross-selling Revenue in Shopping Malls,” International Conference of Asian Marketing Associations (ICAMA), Jeju, Korea (2022).`,
+            `“A Collaborative Filtering Model Incorporating Media Promotions and Users’ Variety-Seeking Tendencies in the Digital Music Market,” KAIST BTM Brown Bag Seminar, Daejeon, Korea (2021), KAIST AI-SSRG Boot Camp, Virtual (2021).`
         ]
     };
 
