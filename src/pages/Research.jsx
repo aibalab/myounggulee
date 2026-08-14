@@ -40,10 +40,11 @@ const Research = () => {
     };
 
     return (
-        <div className="bg-white py-16 sm:py-24">
+        <div className="bg-night-950 py-16 sm:py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 className="text-4xl font-bold text-slate-900 mb-4 tracking-tight">Publications</h1>
-                <p className="text-lg text-slate-500 mb-12">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary-400 mb-4">Research</p>
+                <h1 className="text-4xl font-semibold text-metal mb-4 tracking-tight">Publications</h1>
+                <p className="text-lg text-slate-400 mb-12">
                     Our recent research contributions to international journals and conferences.
                 </p>
 
@@ -51,13 +52,13 @@ const Research = () => {
                     {/* International Journals */}
                     <section>
                         <div className="flex items-center mb-6">
-                            <Globe className="h-6 w-6 text-primary-600 mr-3" />
-                            <h2 className="text-2xl font-bold text-slate-900">International Journals</h2>
+                            <Globe className="h-6 w-6 text-primary-400 mr-3" />
+                            <h2 className="text-2xl font-semibold text-white">International Journals</h2>
                         </div>
-                        <ul className="space-y-4">
+                        <ul className="space-y-3">
                             {publications.international.map((pub, idx) => (
-                                <li key={idx} className="bg-slate-50 p-6 rounded-lg border border-slate-100 hover:border-primary-100 transition-colors">
-                                    <p className="text-slate-800 leading-relaxed font-serif">{pub}</p>
+                                <li key={idx} className="bg-night-850 p-6 rounded-xl border border-white/[0.06] hover:border-primary-400/30 transition-colors">
+                                    <p className="text-slate-300 leading-relaxed">{pub}</p>
                                 </li>
                             ))}
                         </ul>
@@ -66,13 +67,13 @@ const Research = () => {
                     {/* Domestic Journals */}
                     <section>
                         <div className="flex items-center mb-6">
-                            <Book className="h-6 w-6 text-primary-600 mr-3" />
-                            <h2 className="text-2xl font-bold text-slate-900">Domestic Journals</h2>
+                            <Book className="h-6 w-6 text-primary-400 mr-3" />
+                            <h2 className="text-2xl font-semibold text-white">Domestic Journals</h2>
                         </div>
-                        <ul className="space-y-4">
+                        <ul className="space-y-3">
                             {publications.domestic.map((pub, idx) => (
-                                <li key={idx} className="bg-slate-50 p-6 rounded-lg border border-slate-100 hover:border-primary-100 transition-colors">
-                                    <p className="text-slate-800 leading-relaxed font-serif">{pub}</p>
+                                <li key={idx} className="bg-night-850 p-6 rounded-xl border border-white/[0.06] hover:border-primary-400/30 transition-colors">
+                                    <p className="text-slate-300 leading-relaxed">{pub}</p>
                                 </li>
                             ))}
                         </ul>
@@ -81,13 +82,13 @@ const Research = () => {
                     {/* Conferences */}
                     <section>
                         <div className="flex items-center mb-6">
-                            <Mic className="h-6 w-6 text-primary-600 mr-3" />
-                            <h2 className="text-2xl font-bold text-slate-900">Conference Presentations</h2>
+                            <Mic className="h-6 w-6 text-primary-400 mr-3" />
+                            <h2 className="text-2xl font-semibold text-white">Conference Presentations</h2>
                         </div>
                         <ul className="space-y-4">
                             {publications.conferences.map((pub, idx) => (
-                                <li key={idx} className="pl-4 border-l-4 border-primary-200 py-1">
-                                    <p className="text-slate-700 leading-relaxed text-sm">{pub}</p>
+                                <li key={idx} className="pl-4 border-l-2 border-primary-500/40 py-1">
+                                    <p className="text-slate-400 leading-relaxed text-sm">{pub}</p>
                                 </li>
                             ))}
                         </ul>

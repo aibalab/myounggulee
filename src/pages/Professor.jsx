@@ -1,18 +1,25 @@
-import { GraduationCap, Briefcase, BookOpen, User, Building, Mail, Linkedin } from 'lucide-react';
+import { GraduationCap, BookOpen, User, Building, Mail, Linkedin } from 'lucide-react';
 import { labInfo } from '../data/labInfo';
+
+const SectionTitle = ({ children }) => (
+    <h2 className="text-2xl font-semibold text-white mb-6 pb-3 border-b border-white/[0.08] flex items-center">
+        <span className="bg-primary-500 w-1.5 h-7 mr-3 rounded-full"></span>
+        {children}
+    </h2>
+);
 
 const Professor = () => {
     const { professor } = labInfo;
 
     return (
-        <div className="bg-white py-16 sm:py-24">
+        <div className="bg-night-950 py-16 sm:py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div className="lg:grid lg:grid-cols-12 lg:gap-10">
 
                     {/* Sidebar / Profile Info */}
                     <div className="lg:col-span-4 mb-12 lg:mb-0">
-                        <div className="sticky top-24">
-                            <div className="max-w-48 mx-auto lg:mx-0 aspect-w-3 aspect-h-4 rounded-2xl overflow-hidden bg-slate-100 mb-6 shadow-lg border border-slate-200">
+                        <div className="sticky top-24 rounded-2xl border border-white/[0.06] bg-night-850 p-6">
+                            <div className="max-w-48 mx-auto lg:mx-0 rounded-xl overflow-hidden bg-night-800 mb-6 border border-white/[0.08] shadow-lg">
                                 {professor.photo ? (
                                     <img
                                         src={professor.photo.startsWith('http') ? professor.photo : (import.meta.env.BASE_URL + '/' + professor.photo).replace(/\/+/g, '/')}
@@ -20,43 +27,43 @@ const Professor = () => {
                                         className="h-full w-full object-cover"
                                     />
                                 ) : (
-                                    <div className="flex items-center justify-center h-full w-full bg-slate-200 text-slate-400 py-20">
+                                    <div className="flex items-center justify-center h-full w-full text-slate-600 py-20">
                                         <User className="h-32 w-32" />
                                     </div>
                                 )}
                             </div>
 
-                            <h1 className="text-3xl font-bold text-slate-900 tracking-tight">{professor.name}</h1>
+                            <h1 className="text-3xl font-semibold text-white tracking-tight">{professor.name}</h1>
                             <p className="text-slate-500 font-medium">{professor.nameKr}</p>
 
-                            <div className="mt-6 space-y-4">
-                                <div className="flex items-center text-slate-600">
-                                    <Building className="h-5 w-5 mr-3 text-primary-600" />
+                            <div className="mt-6 space-y-4 text-sm">
+                                <div className="flex items-center text-slate-300">
+                                    <Building className="h-5 w-5 mr-3 text-primary-400 shrink-0" />
                                     <span>{labInfo.professor.title.split('|')[0]}<br />{labInfo.university}</span>
                                 </div>
-                                <div className="flex items-center text-slate-600">
-                                    <BookOpen className="h-5 w-5 mr-3 text-primary-600" />
+                                <div className="flex items-center text-slate-300">
+                                    <BookOpen className="h-5 w-5 mr-3 text-primary-400 shrink-0" />
                                     <span>{labInfo.department}</span>
                                 </div>
-                                <div className="flex items-center text-slate-600 pt-2 border-t border-slate-100">
-                                    <Mail className="h-5 w-5 mr-3 text-primary-600" />
-                                    <a href={`mailto:${labInfo.email}`} className="text-sm hover:text-primary-600 transition-colors truncate" title={labInfo.email}>{labInfo.email}</a>
+                                <div className="flex items-center text-slate-300 pt-3 border-t border-white/[0.06]">
+                                    <Mail className="h-5 w-5 mr-3 text-primary-400 shrink-0" />
+                                    <a href={`mailto:${labInfo.email}`} className="hover:text-white transition-colors truncate" title={labInfo.email}>{labInfo.email}</a>
                                 </div>
-                                <div className="flex items-center text-slate-600">
-                                    <GraduationCap className="h-5 w-5 mr-3 text-primary-600" />
-                                    <a href={labInfo.googleScholar} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-primary-600 transition-colors">Google Scholar</a>
+                                <div className="flex items-center text-slate-300">
+                                    <GraduationCap className="h-5 w-5 mr-3 text-primary-400 shrink-0" />
+                                    <a href={labInfo.googleScholar} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Google Scholar</a>
                                 </div>
-                                <div className="flex items-center text-slate-600">
-                                    <Linkedin className="h-5 w-5 mr-3 text-primary-600" />
-                                    <a href={labInfo.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-primary-600 transition-colors">LinkedIn</a>
+                                <div className="flex items-center text-slate-300">
+                                    <Linkedin className="h-5 w-5 mr-3 text-primary-400 shrink-0" />
+                                    <a href={labInfo.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
                                 </div>
                             </div>
 
-                            <div className="mt-8 pt-8 border-t border-slate-200">
-                                <h3 className="font-semibold text-slate-900 mb-4">Research Interests</h3>
+                            <div className="mt-8 pt-6 border-t border-white/[0.06]">
+                                <h3 className="font-semibold text-white mb-4">Research Interests</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {professor.interests.map(tag => (
-                                        <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-50 text-primary-700">
+                                        <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-500/10 text-primary-300 border border-primary-500/20">
                                             {tag}
                                         </span>
                                     ))}
@@ -66,15 +73,12 @@ const Professor = () => {
                     </div>
 
                     {/* Main Content */}
-                    <div className="lg:col-span-8 space-y-12">
+                    <div className="lg:col-span-8 space-y-14">
 
                         {/* Biography */}
                         <section>
-                            <h2 className="text-2xl font-bold text-slate-900 mb-4 pb-2 border-b border-slate-200 flex items-center">
-                                <span className="bg-primary-600 w-2 h-8 mr-3 rounded-sm"></span>
-                                Biography
-                            </h2>
-                            <div className="prose prose-slate max-w-none text-slate-600 space-y-4">
+                            <SectionTitle>Biography</SectionTitle>
+                            <div className="max-w-none text-slate-400 space-y-4 leading-relaxed">
                                 {professor.bio.map((p, i) => (
                                     <p key={i}>{p}</p>
                                 ))}
@@ -83,18 +87,15 @@ const Professor = () => {
 
                         {/* Education */}
                         <section>
-                            <h2 className="text-2xl font-bold text-slate-900 mb-6 pb-2 border-b border-slate-200 flex items-center">
-                                <span className="bg-primary-600 w-2 h-8 mr-3 rounded-sm"></span>
-                                Education
-                            </h2>
+                            <SectionTitle>Education</SectionTitle>
                             <div className="space-y-8">
                                 {professor.education.map((edu, idx) => (
-                                    <div key={idx} className="relative pl-8 border-l-2 border-slate-200">
-                                        <div className={`absolute -left-[9px] top-0 h-4 w-4 rounded-full ${idx === 0 ? 'bg-primary-200 border-2 border-primary-600' : 'bg-slate-200 border-2 border-slate-400'}`}></div>
-                                        <h3 className="text-lg font-bold text-slate-900">{edu.school}</h3>
-                                        <p className={`${idx === 0 ? 'text-primary-700' : 'text-slate-700'} font-medium`}>{edu.degree}</p>
+                                    <div key={idx} className="relative pl-8 border-l-2 border-white/[0.08]">
+                                        <div className={`absolute -left-[9px] top-0 h-4 w-4 rounded-full border-2 ${idx === 0 ? 'bg-primary-500/30 border-primary-400' : 'bg-night-700 border-slate-600'}`}></div>
+                                        <h3 className="text-lg font-semibold text-white">{edu.school}</h3>
+                                        <p className={`${idx === 0 ? 'text-primary-300' : 'text-slate-300'} font-medium`}>{edu.degree}</p>
                                         <p className="text-sm text-slate-500">{edu.period}</p>
-                                        {edu.note && <p className="text-sm text-slate-600 mt-1">{edu.note}</p>}
+                                        {edu.note && <p className="text-sm text-slate-400 mt-1">{edu.note}</p>}
                                     </div>
                                 ))}
                             </div>
@@ -102,18 +103,15 @@ const Professor = () => {
 
                         {/* Experience */}
                         <section>
-                            <h2 className="text-2xl font-bold text-slate-900 mb-6 pb-2 border-b border-slate-200 flex items-center">
-                                <span className="bg-primary-600 w-2 h-8 mr-3 rounded-sm"></span>
-                                Professional Experience
-                            </h2>
-                            <div className="grid grid-cols-1 gap-4">
+                            <SectionTitle>Professional Experience</SectionTitle>
+                            <div className="grid grid-cols-1 gap-3">
                                 {labInfo.professionalExperience.map((job, idx) => (
-                                    <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 rounded-lg border border-slate-100 hover:border-primary-200 transition-colors">
+                                    <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl border border-white/[0.06] bg-night-850 hover:border-primary-400/30 transition-colors">
                                         <div>
-                                            <h3 className="font-bold text-slate-900">{job.org}</h3>
-                                            <p className="text-slate-600 text-sm">{job.title}</p>
+                                            <h3 className="font-semibold text-white">{job.org}</h3>
+                                            <p className="text-slate-400 text-sm">{job.title}</p>
                                         </div>
-                                        <span className="text-xs font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">
+                                        <span className="text-xs font-semibold text-primary-300 bg-primary-500/10 border border-primary-500/20 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">
                                             {job.period}
                                         </span>
                                     </div>
@@ -123,20 +121,17 @@ const Professor = () => {
 
                         {/* Service */}
                         <section>
-                            <h2 className="text-2xl font-bold text-slate-900 mb-6 pb-2 border-b border-slate-200 flex items-center">
-                                <span className="bg-primary-600 w-2 h-8 mr-3 rounded-sm"></span>
-                                Academic Service
-                            </h2>
-                            <ul className="list-disc pl-5 space-y-2 text-slate-600">
-                                <li><strong>Editorial Service:</strong> Journal of Global Scholars of Marketing Science ERB, 정보통신정책학회 편집위원, (전) 대한경영학회 편집위원</li>
-                                <li><strong>Peer Review:</strong> Electronic Commerce Research, Journal of Business Research, APJIS, etc.</li>
-                                <li><strong>Membership:</strong> 한국경영정보학회 종신회원, 정보통신정책학회 종신회원</li>
+                            <SectionTitle>Academic Service</SectionTitle>
+                            <ul className="list-disc pl-5 space-y-2 text-slate-400">
+                                <li><strong className="text-slate-200">Editorial Service:</strong> Journal of Global Scholars of Marketing Science ERB, 정보통신정책학회 편집위원, (전) 대한경영학회 편집위원</li>
+                                <li><strong className="text-slate-200">Peer Review:</strong> Electronic Commerce Research, Journal of Business Research, APJIS, etc.</li>
+                                <li><strong className="text-slate-200">Membership:</strong> 한국경영정보학회 종신회원, 정보통신정책학회 종신회원</li>
                             </ul>
                         </section>
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     );
 };
 

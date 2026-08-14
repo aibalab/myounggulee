@@ -34,41 +34,42 @@ const Projects = () => {
     ];
 
     return (
-        <div className="bg-white py-16 sm:py-24">
+        <div className="bg-night-950 py-16 sm:py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="text-center mb-16">
-                    <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary-400 mb-4">Projects</p>
+                    <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-metal mb-4">
                         Industrial Projects
                     </h1>
-                    <p className="text-lg text-slate-500">
+                    <p className="text-lg text-slate-400">
                         We welcome industry collaborations utilizing data-driven approaches.
                     </p>
-                    <div className="mt-4 inline-flex items-center rounded-full bg-primary-50 px-4 py-1.5 text-sm font-medium text-primary-700">
+                    <div className="mt-4 inline-flex items-center rounded-full bg-primary-500/10 border border-primary-500/20 px-4 py-1.5 text-sm font-medium text-primary-300">
                         Industry collaborations are welcome!
                     </div>
                 </div>
 
-                <div className="relative border-l-2 border-slate-200 ml-4 md:ml-6 space-y-12">
+                <div className="relative border-l-2 border-white/[0.08] ml-4 md:ml-6 space-y-12">
                     {projects.map((project, idx) => (
                         <div key={idx} className="relative pl-8 md:pl-12">
                             {/* Dot */}
-                            <div className="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-primary-100 border-2 border-primary-600 shadow-sm"></div>
+                            <div className="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-primary-500/30 border-2 border-primary-400 shadow-[0_0_12px_rgba(99,102,241,0.5)]"></div>
 
                             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
-                                <span className="text-sm font-bold text-primary-600 tracking-wide uppercase">
+                                <span className="text-sm font-bold text-primary-300 tracking-wide uppercase">
                                     {project.period}
                                 </span>
                             </div>
 
-                            <div className="bg-slate-50 rounded-xl p-6 border border-slate-100 hover:shadow-md transition-shadow">
+                            <div className="bg-night-850 rounded-xl p-6 border border-white/[0.06] hover:border-primary-400/30 transition-colors">
                                 <div className="mb-4">
-                                    <h3 className="text-xl font-bold text-slate-900 mb-1">{project.title}</h3>
-                                    <p className="text-slate-500 font-serif text-sm italic">{project.title_kr}</p>
+                                    <h3 className="text-xl font-semibold text-white mb-1">{project.title}</h3>
+                                    <p className="text-slate-500 text-sm">{project.title_kr}</p>
                                 </div>
 
-                                <div className="text-slate-700">
-                                    <p className="mb-1 font-medium">{project.desc}</p>
+                                <div>
+                                    <p className="mb-1 font-medium text-slate-300">{project.desc}</p>
                                     <p className="text-slate-500 text-sm">{project.desc_kr}</p>
                                 </div>
                             </div>

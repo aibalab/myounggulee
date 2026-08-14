@@ -2,8 +2,8 @@
 // 사진을 바꾸고 싶다면 public 폴더에 사진을 넣고 경로를 수정하세요.
 
 export const labInfo = {
-    name: "AIBA Lab",
-    fullName: "AI & Machine Learning for Business Analytics",
+    name: "DAISY Lab",
+    fullName: "Data & AI Systems for Business Analytics",
     university: "Konkuk University",
     department: "School of Business",
     location: "120 Neungdong-ro, Gwangjin-gu, Seoul 05029, South Korea",
@@ -14,10 +14,9 @@ export const labInfo = {
     cvLink: "https://docs.google.com/document/d/1T1RuPHsVFsxrHhkJid1FIPr-6S6SmdSf/edit?usp=drive_link&ouid=109667819159317009117&rtpof=true&sd=true",
 
     hero: {
-        title: "AI & Machine Learning",
+        title: "Data & AI Systems",
         subtitle: "for Business Analytics",
         description: "We leverage AI technology to transform the value of customers, platforms, and data in business. Our research focuses on Marketing Innovation, Strategic IS, and Generative AI applications.",
-        bgImage: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop", // Agentic AI & Robotics theme (Round eyes robot)
     },
 
     professor: {
