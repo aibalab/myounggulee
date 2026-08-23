@@ -1,5 +1,6 @@
 import { GraduationCap, BookOpen, User, Building, Mail, Linkedin } from 'lucide-react';
 import { labInfo } from '../data/labInfo';
+import { useLanguage } from '../context/LanguageContext';
 
 const SectionTitle = ({ children }) => (
     <h2 className="text-2xl font-semibold text-white mb-6 pb-3 border-b border-white/[0.08] flex items-center">
@@ -9,6 +10,7 @@ const SectionTitle = ({ children }) => (
 );
 
 const Professor = () => {
+    const { t } = useLanguage();
     const { professor } = labInfo;
 
     return (
@@ -33,17 +35,21 @@ const Professor = () => {
                                 )}
                             </div>
 
-                            <h1 className="text-3xl font-semibold text-white tracking-tight">{professor.name}</h1>
-                            <p className="text-slate-500 font-medium">{professor.nameKr}</p>
+                            <h1 className="text-3xl font-semibold text-white tracking-tight">
+                                {t({ ko: professor.nameKr, en: professor.name })}
+                            </h1>
+                            <p className="text-slate-500 font-medium">
+                                {t({ ko: professor.name, en: professor.nameKr })}
+                            </p>
 
                             <div className="mt-6 space-y-4 text-sm">
                                 <div className="flex items-center text-slate-300">
                                     <Building className="h-5 w-5 mr-3 text-primary-400 shrink-0" />
-                                    <span>{labInfo.professor.title.split('|')[0]}<br />{labInfo.university}</span>
+                                    <span>{t(professor.title)}<br />{t(labInfo.university)}</span>
                                 </div>
                                 <div className="flex items-center text-slate-300">
                                     <BookOpen className="h-5 w-5 mr-3 text-primary-400 shrink-0" />
-                                    <span>{labInfo.department}</span>
+                                    <span>{t(labInfo.department)}</span>
                                 </div>
                                 <div className="flex items-center text-slate-300 pt-3 border-t border-white/[0.06]">
                                     <Mail className="h-5 w-5 mr-3 text-primary-400 shrink-0" />
@@ -60,7 +66,9 @@ const Professor = () => {
                             </div>
 
                             <div className="mt-8 pt-6 border-t border-white/[0.06]">
-                                <h3 className="font-semibold text-white mb-4">Research Interests</h3>
+                                <h3 className="font-semibold text-white mb-4">
+                                    {t({ ko: '연구 관심 분야', en: 'Research Interests' })}
+                                </h3>
                                 <div className="flex flex-wrap gap-2">
                                     {professor.interests.map(tag => (
                                         <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-500/10 text-primary-300 border border-primary-500/20">
@@ -77,25 +85,25 @@ const Professor = () => {
 
                         {/* Biography */}
                         <section>
-                            <SectionTitle>Biography</SectionTitle>
+                            <SectionTitle>{t({ ko: '소개', en: 'Biography' })}</SectionTitle>
                             <div className="max-w-none text-slate-400 space-y-4 leading-relaxed">
                                 {professor.bio.map((p, i) => (
-                                    <p key={i}>{p}</p>
+                                    <p key={i}>{t(p)}</p>
                                 ))}
                             </div>
                         </section>
 
                         {/* Education */}
                         <section>
-                            <SectionTitle>Education</SectionTitle>
+                            <SectionTitle>{t({ ko: '학력', en: 'Education' })}</SectionTitle>
                             <div className="space-y-8">
                                 {professor.education.map((edu, idx) => (
                                     <div key={idx} className="relative pl-8 border-l-2 border-white/[0.08]">
                                         <div className={`absolute -left-[9px] top-0 h-4 w-4 rounded-full border-2 ${idx === 0 ? 'bg-primary-500/30 border-primary-400' : 'bg-night-700 border-slate-600'}`}></div>
                                         <h3 className="text-lg font-semibold text-white">{edu.school}</h3>
-                                        <p className={`${idx === 0 ? 'text-primary-300' : 'text-slate-300'} font-medium`}>{edu.degree}</p>
+                                        <p className={`${idx === 0 ? 'text-primary-300' : 'text-slate-300'} font-medium`}>{t(edu.degree)}</p>
                                         <p className="text-sm text-slate-500">{edu.period}</p>
-                                        {edu.note && <p className="text-sm text-slate-400 mt-1">{edu.note}</p>}
+                                        {edu.note && <p className="text-sm text-slate-400 mt-1">{t(edu.note)}</p>}
                                     </div>
                                 ))}
                             </div>
@@ -103,13 +111,13 @@ const Professor = () => {
 
                         {/* Experience */}
                         <section>
-                            <SectionTitle>Professional Experience</SectionTitle>
+                            <SectionTitle>{t({ ko: '경력', en: 'Professional Experience' })}</SectionTitle>
                             <div className="grid grid-cols-1 gap-3">
                                 {labInfo.professionalExperience.map((job, idx) => (
                                     <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl border border-white/[0.06] bg-night-850 hover:border-primary-400/30 transition-colors">
                                         <div>
-                                            <h3 className="font-semibold text-white">{job.org}</h3>
-                                            <p className="text-slate-400 text-sm">{job.title}</p>
+                                            <h3 className="font-semibold text-white">{t(job.org)}</h3>
+                                            <p className="text-slate-400 text-sm">{t(job.title)}</p>
                                         </div>
                                         <span className="text-xs font-semibold text-primary-300 bg-primary-500/10 border border-primary-500/20 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">
                                             {job.period}
@@ -121,11 +129,13 @@ const Professor = () => {
 
                         {/* Service */}
                         <section>
-                            <SectionTitle>Academic Service</SectionTitle>
+                            <SectionTitle>{t({ ko: '학술 활동', en: 'Academic Service' })}</SectionTitle>
                             <ul className="list-disc pl-5 space-y-2 text-slate-400">
-                                <li><strong className="text-slate-200">Editorial Service:</strong> Journal of Global Scholars of Marketing Science ERB, 정보통신정책학회 편집위원, (전) 대한경영학회 편집위원</li>
-                                <li><strong className="text-slate-200">Peer Review:</strong> Electronic Commerce Research, Journal of Business Research, APJIS, etc.</li>
-                                <li><strong className="text-slate-200">Membership:</strong> 한국경영정보학회 종신회원, 정보통신정책학회 종신회원</li>
+                                {labInfo.academicService.map((item, idx) => (
+                                    <li key={idx}>
+                                        <strong className="text-slate-200">{t(item.label)}:</strong> {t(item.text)}
+                                    </li>
+                                ))}
                             </ul>
                         </section>
                     </div>

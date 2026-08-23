@@ -1,4 +1,5 @@
 import { Lock } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 // Client brand mark shown on the left of each project card
 const BrandTile = ({ brand }) => (
@@ -22,6 +23,7 @@ const BrandTile = ({ brand }) => (
 );
 
 const Projects = () => {
+    const { t } = useLanguage();
     const projects = [
 
         {
@@ -63,15 +65,15 @@ const Projects = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="text-center mb-16">
-                    <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary-400 mb-4">Projects</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary-400 mb-4">{t({ ko: '프로젝트', en: 'Projects' })}</p>
                     <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-metal mb-4">
-                        Industrial Projects
+                        {t({ ko: '산학 프로젝트', en: 'Industrial Projects' })}
                     </h1>
                     <p className="text-lg text-slate-400">
-                        We welcome industry collaborations utilizing data-driven approaches.
+                        {t({ ko: '데이터 기반 접근을 활용한 산업계와의 협력을 환영합니다.', en: 'We welcome industry collaborations utilizing data-driven approaches.' })}
                     </p>
                     <div className="mt-4 inline-flex items-center rounded-full bg-primary-500/10 border border-primary-500/20 px-4 py-1.5 text-sm font-medium text-primary-300">
-                        Industry collaborations are welcome!
+                        {t({ ko: '산학협력 문의를 환영합니다!', en: 'Industry collaborations are welcome!' })}
                     </div>
                 </div>
 
@@ -91,13 +93,21 @@ const Projects = () => {
                                 <BrandTile brand={project.brand} />
                                 <div className="min-w-0">
                                     <div className="mb-4">
-                                        <h3 className="text-xl font-semibold text-white mb-1">{project.title}</h3>
-                                        <p className="text-slate-500 text-sm">{project.title_kr}</p>
+                                        <h3 className="text-xl font-semibold text-white mb-1">
+                                            {t({ ko: project.title_kr, en: project.title })}
+                                        </h3>
+                                        <p className="text-slate-500 text-sm">
+                                            {t({ ko: project.title, en: project.title_kr })}
+                                        </p>
                                     </div>
 
                                     <div>
-                                        <p className="mb-1 font-medium text-slate-300">{project.desc}</p>
-                                        <p className="text-slate-500 text-sm">{project.desc_kr}</p>
+                                        <p className="mb-1 font-medium text-slate-300">
+                                            {t({ ko: project.desc_kr, en: project.desc })}
+                                        </p>
+                                        <p className="text-slate-500 text-sm">
+                                            {t({ ko: project.desc, en: project.desc_kr })}
+                                        </p>
                                     </div>
                                 </div>
                             </div>

@@ -1,8 +1,11 @@
 import { Mail, MapPin } from 'lucide-react';
 import { labInfo } from '../data/labInfo';
+import { useLanguage } from '../context/LanguageContext';
 import DaisyMark from './DaisyMark';
 
 const Footer = () => {
+    const { t } = useLanguage();
+
     return (
         <footer className="bg-night-950 border-t border-white/5 mt-auto">
             <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -18,22 +21,21 @@ const Footer = () => {
                         </div>
                         <p className="text-sm text-slate-400 leading-relaxed">
                             {labInfo.fullName}<br />
-                            {labInfo.university}
+                            {t(labInfo.university)}
                         </p>
                     </div>
 
                     {/* Contact */}
                     <div>
                         <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">
-                            Contact
+                            {t({ ko: '연락처', en: 'Contact' })}
                         </h3>
                         <div className="space-y-3">
                             <div className="flex items-start">
                                 <MapPin className="h-5 w-5 text-primary-400 mr-2 mt-0.5 shrink-0" />
                                 <p className="text-sm text-slate-400">
-                                    School of Business, Konkuk University<br />
-                                    120 Neungdong-ro, Gwangjin-gu<br />
-                                    Seoul 05029, South Korea
+                                    {t({ ko: '건국대학교 경영대학', en: 'School of Business, Konkuk University' })}<br />
+                                    {t(labInfo.location)}
                                 </p>
                             </div>
                             <div className="flex items-center">
@@ -48,7 +50,7 @@ const Footer = () => {
                     {/* Links */}
                     <div>
                         <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">
-                            Links
+                            {t({ ko: '링크', en: 'Links' })}
                         </h3>
                         <div className="flex space-x-4 text-sm">
                             <a
@@ -66,9 +68,9 @@ const Footer = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-slate-400 hover:text-white transition-colors"
-                                title="Konkuk University Home"
+                                title={t({ ko: '건국대학교 홈', en: 'Konkuk University Home' })}
                             >
-                                Konkuk Home
+                                {t({ ko: '건국대 홈', en: 'Konkuk Home' })}
                             </a>
                         </div>
                     </div>
@@ -76,7 +78,7 @@ const Footer = () => {
 
                 <div className="mt-10 border-t border-white/5 pt-8">
                     <p className="text-sm text-center text-slate-500">
-                        &copy; {new Date().getFullYear()} {labInfo.name}, {labInfo.university}. All rights reserved.
+                        &copy; {new Date().getFullYear()} {labInfo.name}, {t(labInfo.university)}. All rights reserved.
                     </p>
                 </div>
             </div>

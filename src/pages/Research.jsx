@@ -1,6 +1,8 @@
 import { Mic, Globe, Book } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Research = () => {
+    const { t } = useLanguage();
     const publications = {
         international: [
             `Lee, M.*, & Kim, H. J. (2026). Uncovering App Activity Patterns Behind E-Commerce App Usage: An Explainable AI Framework. Asia Marketing Journal, 28(2).`,
@@ -42,10 +44,10 @@ const Research = () => {
     return (
         <div className="bg-night-950 py-16 sm:py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary-400 mb-4">Research</p>
-                <h1 className="text-4xl font-semibold text-metal mb-4 tracking-tight">Publications</h1>
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary-400 mb-4">{t({ ko: '연구', en: 'Research' })}</p>
+                <h1 className="text-4xl font-semibold text-metal mb-4 tracking-tight">{t({ ko: '논문', en: 'Publications' })}</h1>
                 <p className="text-lg text-slate-400 mb-12">
-                    Our recent research contributions to international journals and conferences.
+                    {t({ ko: '국제 저널과 학회에 발표한 최근 연구 성과입니다.', en: 'Our recent research contributions to international journals and conferences.' })}
                 </p>
 
                 <div className="space-y-16">
@@ -53,7 +55,7 @@ const Research = () => {
                     <section>
                         <div className="flex items-center mb-6">
                             <Globe className="h-6 w-6 text-primary-400 mr-3" />
-                            <h2 className="text-2xl font-semibold text-white">International Journals</h2>
+                            <h2 className="text-2xl font-semibold text-white">{t({ ko: '국제 저널', en: 'International Journals' })}</h2>
                         </div>
                         <ul className="space-y-3">
                             {publications.international.map((pub, idx) => (
@@ -68,7 +70,7 @@ const Research = () => {
                     <section>
                         <div className="flex items-center mb-6">
                             <Book className="h-6 w-6 text-primary-400 mr-3" />
-                            <h2 className="text-2xl font-semibold text-white">Domestic Journals</h2>
+                            <h2 className="text-2xl font-semibold text-white">{t({ ko: '국내 저널', en: 'Domestic Journals' })}</h2>
                         </div>
                         <ul className="space-y-3">
                             {publications.domestic.map((pub, idx) => (
@@ -83,7 +85,7 @@ const Research = () => {
                     <section>
                         <div className="flex items-center mb-6">
                             <Mic className="h-6 w-6 text-primary-400 mr-3" />
-                            <h2 className="text-2xl font-semibold text-white">Conference Presentations</h2>
+                            <h2 className="text-2xl font-semibold text-white">{t({ ko: '학회 발표', en: 'Conference Presentations' })}</h2>
                         </div>
                         <ul className="space-y-4">
                             {publications.conferences.map((pub, idx) => (
